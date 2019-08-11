@@ -3,12 +3,12 @@ import API from '../utils/API';
 import Jumbotron from '../components/Jumbotron';
 import Card from '../components/Card';
 
-class Saved extends Component {
+class SavedBooks extends Component {
   state = {books: []};
 
-  // Method to Query the API/Database to GET all the books in the database.
+  // Method to GET all the books in the database.
   loadSaved = () => {
-    API.getBooks()
+    API.getBook()
       .then(res => this.setState({books: res.data}))
       .catch(err => console.log(err))
   };
@@ -16,10 +16,11 @@ class Saved extends Component {
   // Method to DELETE a particular book from the database.
   deleteBook = event => {
     API.deleteBook(event.target.id)
-      .then(res => this.loadSaved())
+      .then(res => this.loadBookshelf())
       .catch(err => console.log(err))
   };
 
+  // Lifecycle Method - once the Bookshelf Component mounts it runs the 'loadBookshelf' method.
   componentDidMount() {
     this.loadSaved()
   }
@@ -28,9 +29,15 @@ class Saved extends Component {
     return (
       <div className="container">
         <Jumbotron/>
+        <Card
+          books={this.state.books}
+          buttonAction={this.deleteBook}
+          buttonType="btn btn-danger mt-2"
+          buttonText="Delete Book"
+        />
       </div>
     )
   }
 }
 
-export default Saved;
+export default SavedBooks;
