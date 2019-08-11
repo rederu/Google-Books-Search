@@ -16,11 +16,11 @@ class SavedBooks extends Component {
   // Method to DELETE a particular book from the database.
   deleteBook = event => {
     API.deleteBook(event.target.id)
-      .then(res => this.loadBookshelf())
+      .then(res => this.loadSaved())
       .catch(err => console.log(err))
   };
 
-  // Lifecycle Method - once the Bookshelf Component mounts it runs the 'loadBookshelf' method.
+  // Lifecycle Method
   componentDidMount() {
     this.loadSaved()
   }
