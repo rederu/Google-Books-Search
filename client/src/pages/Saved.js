@@ -6,14 +6,13 @@ import Card from '../components/Card';
 class SavedBooks extends Component {
   state = {books: []};
 
-  // Method to GET all the books in the database.
+  
   loadSaved = () => {
     API.getBook()
       .then(res => this.setState({books: res.data}))
       .catch(err => console.log(err))
   };
 
-  // Method to DELETE a particular book from the database.
   deleteBook = event => {
     API.deleteBook(event.target.id)
       .then(res => this.loadSaved())

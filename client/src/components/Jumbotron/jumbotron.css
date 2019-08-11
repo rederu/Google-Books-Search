@@ -1,0 +1,42 @@
+.jumbotron {
+    background-image: url("https://i.imgur.com/GBEdWBg.jpg");
+    /* Full height */
+    height: 50%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    font-size: 5rem;
+    padding: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+    background: linear-gradient(to right, #c163ec 10%, rgb(250, 159, 245) 50%, #5fdaff 60%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 8.5s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.subtext{
+    font-weight: bolder;
+    font-size: 1,4rem;
+    text-shadow: 2px 2px 4px #9b9b9b;
+    color: rgb(255, 255, 255)
+}

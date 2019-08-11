@@ -11,16 +11,10 @@ const bookResults = googleApiResults => {
 
     const formattedBook = {
       title: book.volumeInfo.title,
-      authors: book.volumeInfo.authors
-        ? book.volumeInfo.authors
-        : ['No Author Listed.'],
-      description: book.volumeInfo.description
-        ? book.volumeInfo.description
-        : 'No Description Listed.',
+      authors: book.volumeInfo.authors,
+      description: book.volumeInfo.description,
       googleId: book.id,
-      image: book.volumeInfo.imageLinks
-        ? book.volumeInfo.imageLinks.thumbnail
-        : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/170px-No_image_available.svg.png',
+      image: book.volumeInfo.imageLinks,
       link: book.volumeInfo.canonicalVolumeLink
     };
 
@@ -37,7 +31,6 @@ class Search extends Component {
     error: ''
   };
 
-  // Method for saving a particular book to the database.
   saveBook = event => {
 
     const chosenBook = this.state.results.find(book => book.googleId === event.target.id);
@@ -55,7 +48,6 @@ class Search extends Component {
     console.log(newSave);
   };
 
-  // Method handling the change of the input field.
   handleInputChange = event => {
     this.setState({search: event.target.value})
   };
@@ -89,5 +81,4 @@ class Search extends Component {
   }
 }
 
-// Exporting Component Utilizing the Alerts.
 export default Search;
