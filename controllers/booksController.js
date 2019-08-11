@@ -14,6 +14,7 @@ module.exports = {
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+      console.log("Error por aquí. Find by Id");
   },
   create: function(req, res) {
     db.Book
