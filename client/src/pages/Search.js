@@ -14,7 +14,7 @@ const bookResults = googleApiResults => {
       authors: book.volumeInfo.authors,
       description: book.volumeInfo.description,
       googleId: book.id,
-      image: book.volumeInfo.imageLinks,
+      image: book.volumeInfo.imageLinks.thumbnail,
       link: book.volumeInfo.canonicalVolumeLink
     };
 

@@ -17,7 +17,7 @@ function Card(props) {
                 <img src={book.image}
                   className="align-self-center mr-3" alt={book.title} />
                 <div className="media-body">
-                  <h6 className="mt-0">{book.authors.join(', ')}</h6>
+                  <h6 className="mt-0">{book.authors}</h6>
                   <p className="mb-0">{book.description}</p>
                 </div>
               </div>
