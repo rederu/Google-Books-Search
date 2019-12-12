@@ -1,5 +1,6 @@
-# Google-Books-Search
- React-based Google Books Search app.
+ <center><img src="https://i.imgur.com/SyarobN.png"></center>
+ 
+  React-based Google Books Search app.
  
 This is a React-based application that searches in the Google Books api for the books you are looking for. Also, you can save the book information or go to the Google Books page to learn more about it.
 
@@ -16,4 +17,4 @@ Saved books can also be deleted if they are no longer required to be stored.
 * Javascript
 
 ## Live Demo
-https://googlebooksearch-wip.herokuapp.com/
+<a href="https://googlebooksearch-wip.herokuapp.com/">Google Books Search</a>
